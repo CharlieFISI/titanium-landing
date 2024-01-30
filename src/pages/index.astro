@@ -1,0 +1,151 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Titanium Gym — Entrena, transforma y triunfa',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Content
+    image={{
+      src: '~/assets/images/bag.jpg',
+      alt: 'Bag Gym Image',
+      width: '734',
+      height: '487',
+    }}
+  >
+    <Fragment slot="content">
+      <span class="font-bold tracking-tight text-blue-900 dark:text-yellow-300 sm:text-7xl mb-2 highlight"
+        >Preparados</span
+      ><span class="font-bold tracking-tight dark:text-white sm:text-7xl mb-2 hidden xl:inline">
+        para el exito, donde quiera que vayas.
+      </span>
+      <br class="my-10" />
+      <span class="hidden sm:inline">
+        No solo te ayudamos a esculpir tu cuerpo, sino que también te brindamos la motivación y el apoyo que necesitas
+        para alcanzar tus objetivos fitness.
+      </span>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    tagline="Nosotros"
+    title="¿Quiénes somos?"
+    subtitle="Conocenos un poco más y descubre por qué somos la mejor opción para ti."
+    image={{
+      src: 'https://www.fundeu.es/wp-content/uploads/2020/03/gimnasio_gym_efespthirteen565662.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <span class="text-xl font-bold italic tracking-tight dark:text-white sm:text-3xl mb-2">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum."
+      </span>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    id="features"
+    tagline="Beneficios"
+    title="¿Qué te ofrecemos?"
+    subtitle="Lo que obtienes con Titanium Gym"
+    items={[
+      {
+        title: 'Un ambiente vibrante y motivador',
+        description:
+          'Sumérgete en un ambiente enérgico donde la motivación es contagiosa. Nuestra comunidad te impulsa a alcanzar nuevas alturas en tu viaje fitness.',
+        icon: 'material-symbols:flash-on-outline',
+      },
+      {
+        title: 'Nutrición y asesoramiento',
+        description:
+          'Recibe asesoramiento nutricional para complementar tu entrenamiento, asegurando que tus hábitos alimenticios respalden tus objetivos de salud y forma física.',
+        icon: 'material-symbols:restaurant',
+      },
+      {
+        title: 'Clases dirigidas para todos los niveles',
+        description:
+          'Participa en clases dinámicas adaptadas a diferentes niveles de condición física, desde principiantes hasta atletas avanzados, para diversificar tu rutina y mejorar tus habilidades.',
+        icon: 'material-symbols:trending-up',
+      },
+      {
+        title: 'Flexibilidad de horarios',
+        description:
+          'Adapta tu rutina según tu agenda. Ofrecemos horarios flexibles para que encuentres el momento perfecto para tu sesión de entrenamiento, sin importar cuán ocupado estés',
+        icon: 'material-symbols:calendar-clock-outline',
+      },
+      {
+        title: 'Programas de entrenamiento personalizado',
+        description:
+          'Diseñamos programas de entrenamiento individualizados que se ajustan a tus objetivos específicos, asegurando que cada sesión sea efectiva y personalizada.',
+        icon: 'material-symbols:tune',
+      },
+      {
+        title: 'Equipos de alta calidad',
+        description:
+          'Descubre una variedad de equipos de última generación diseñados para optimizar tu entrenamiento y maximizar los resultados.',
+        icon: 'material-symbols:high-quality-outline',
+      },
+    ]}
+  />
+
+  <BlogLatestPosts title="Lorem ipsum dolor sit amet">
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+
+  <FAQs
+    title="Preguntas Frecuentes"
+    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Lorem?',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      },
+      {
+        title: 'Lorem?',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      },
+      {
+        title: 'Lorem?',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      },
+      {
+        title: 'Lorem?',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      },
+      {
+        title: 'Lorem?',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      },
+      {
+        title: 'Lorem?',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,90 @@
+---
+import { Icon } from 'astro-icon/components';
+import Button from '~/components/ui/Button.astro';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Pricing } from '~/types';
+
+const {
+  title = '',
+  tagline = '',
+  prices = [],
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props as Pricing;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-8xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <Headline title={title} tagline={tagline} />
+  <div class="flex items-stretch justify-center">
+    <div class="grid grid-cols-4 gap-20 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+      {
+        prices &&
+          prices.map(({ title, price, period, items, callToAction, hasRibbon = false, ribbonTitle }) => (
+            <div class="col-span-3 mx-auto flex w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1">
+              {price && period && (
+                <div class="rounded-lg backdrop-blur border border-gray-200 dark:border-transparent bg-gray-900/95 dark:bg-white/5 shadow px-6 py-8 flex w-full max-w-lg flex-col justify-between text-center">
+                  {hasRibbon && ribbonTitle && (
+                    <div class="absolute right-[-5px] 2xl:right-[-8px] rtl:right-auto rtl:left-[-8px] rtl:2xl:left-[-10px] top-[-5px] 2xl:top-[-10px] z-[1] h-[100px] w-[100px] overflow-hidden text-right">
+                      <span class="absolute top-[19px] right-[-21px] rtl:right-auto rtl:left-[-21px] block w-full rotate-45 rtl:-rotate-45 bg-yellow-500 text-center text-[10px] font-bold uppercase leading-5 text-white shadow-[0_3px_10px_-5px_rgba(0,0,0,0.3)] before:absolute before:left-0 before:top-full before:z-[-1] before:border-[3px] before:border-r-transparent before:border-b-transparent before:border-l-yellow-600 before:border-t-yellow-600 before:content-[''] after:absolute after:right-0 after:top-full after:z-[-1] after:border-[3px] after:border-l-transparent after:border-b-transparent after:border-r-yellow-600 after:border-t-yellow-600 after:content-['']">
+                        {ribbonTitle}
+                      </span>
+                    </div>
+                  )}
+                  <div class="px-2 py-0">
+                    {title && (
+                      <h3 class="text-center text-xl font-semibold uppercase leading-6 tracking-wider mb-2 text-white">
+                        {title}
+                      </h3>
+                    )}
+                    <div class="my-8">
+                      <div class="flex items-center justify-center text-center mb-1">
+                        <span class="text-5xl text-white">$</span>
+                        <span class="text-6xl text-white font-extrabold">{price}</span>
+                        <span class="text-base leading-6 lowercase text-gray-200 dark:text-slate-500 pt-7 pl-0.5">
+                          /{period}
+                        </span>
+                      </div>
+                    </div>
+                    {items && (
+                      <ul role="list" class="my-8 md:my-10 space-y-2 text-left">
+                        {items.map(
+                          ({ description, icon, highlight }) =>
+                            description && (
+                              <li class="flex items-start space-x-3 leading-7">
+                                <div
+                                  class={`flex py-[15px] px-5 rounded-lg justify-center ${highlight ? `${hasRibbon ? 'text-white bg-[#EAF8931A]' : 'text-white bg-[#7469F61A]'}` : 'text-gray-400 bg-transparent'}`}
+                                >
+                                  <Icon
+                                    name={icon ? icon : 'material-symbols:done'}
+                                    class={`w-7 h-7 font-bold pr-1 ${highlight ? `${hasRibbon ? 'text-[#EAF893]' : 'text-[#474EFF]'}` : 'text-gray-400'}`}
+                                  />
+                                  <span>{description}</span>
+                                </div>
+                              </li>
+                            )
+                        )}
+                      </ul>
+                    )}
+                  </div>
+                  {callToAction && (
+                    <div class={`flex justify-center text-white`}>
+                      {typeof callToAction === 'string' ? (
+                        <Fragment set:html={callToAction} />
+                      ) : (
+                        callToAction &&
+                        callToAction.href && <Button {...(hasRibbon ? { variant: 'primary' } : {})} {...callToAction} />
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          ))
+      }
+    </div>
+  </div>
+</WidgetWrapper>

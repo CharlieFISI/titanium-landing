@@ -1,0 +1,105 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+
+const metadata = {
+  title: 'Pricing',
+};
+---
+
+<Layout metadata={metadata}>
+  <Prices
+    tagline="Nuestros precios"
+    title="Elige el plan que se ajusta mejor a ti"
+    prices={[
+      {
+        title: 'Básico',
+        price: 100,
+        period: 'por mes',
+        items: [
+          {
+            description: 'Lorem ipsum dolor sit amet',
+            highlight: true,
+          },
+          {
+            description: 'Lorem ipsum dolor sit amet',
+          },
+          {
+            description: 'Lorem ipsum dolor sit amet',
+          },
+          {
+            description: 'Lorem ipsum dolor sit amet',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          icon: 'tabler:heart',
+          text: 'Suscribirse',
+          href: '#',
+          class: 'rounded-lg px-5 py-4',
+        },
+      },
+      {
+        title: 'Gold',
+        price: 120,
+        period: 'por mes',
+        items: [
+          {
+            description: 'Lorem ipsum dolor sit amet',
+            highlight: true,
+          },
+          {
+            description: 'Lorem ipsum dolor sit amet',
+            highlight: true,
+          },
+          {
+            description: 'Lorem ipsum dolor sit amet',
+          },
+          {
+            description: 'Lorem ipsum dolor sit amet',
+          },
+          {
+            description: 'Lorem ipsum dolor sit amet',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          icon: 'tabler:heart',
+          text: 'Suscribirse',
+          href: '#',
+          class: 'rounded-lg px-5 py-4',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'Black',
+        price: 150,
+        period: 'por mes',
+        items: [
+          {
+            description: 'Lorem ipsum dolor sit amet',
+            highlight: true,
+          },
+          {
+            description: 'Lorem ipsum dolor sit amet',
+            highlight: true,
+          },
+          {
+            description: 'Lorem ipsum dolor sit amet',
+          },
+          {
+            description: 'Lorem ipsum dolor sit amet',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          icon: 'tabler:heart',
+          text: 'Suscribirse',
+          href: '#',
+          class: 'rounded-lg px-5 py-4',
+        },
+      },
+    ]}
+  />
+</Layout>
