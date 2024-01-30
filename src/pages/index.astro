@@ -15,20 +15,23 @@ const metadata = {
 <Layout metadata={metadata}>
   <Content
     image={{
-      src: '~/assets/images/bag.jpg',
-      alt: 'Bag Gym Image',
+      src: '~/assets/images/inicio.png',
+      alt: 'Inicio',
       width: '734',
       height: '487',
     }}
   >
     <Fragment slot="content">
-      <span class="font-bold tracking-tight text-blue-900 dark:text-yellow-300 sm:text-7xl mb-2 highlight"
+      <span
+        class="font-bold tracking-tight text-blue-900 dark:text-yellow-300 text-4xl md:text-7xl leading-tighter mb-2 font-heading"
         >Preparados</span
-      ><span class="font-bold tracking-tight dark:text-white sm:text-7xl mb-2 hidden xl:inline">
+      ><span
+        class="font-bold tracking-tight text-black dark:text-white text-4xl md:text-7xl leading-tighter mb-2 font-heading"
+      >
         para el exito, donde quiera que vayas.
       </span>
       <br class="my-10" />
-      <span class="hidden sm:inline">
+      <span class="sm:text-md md:text-lg lg:text-xl inline">
         No solo te ayudamos a esculpir tu cuerpo, sino que también te brindamos la motivación y el apoyo que necesitas
         para alcanzar tus objetivos fitness.
       </span>
@@ -39,19 +42,17 @@ const metadata = {
     isReversed
     tagline="Nosotros"
     title="¿Quiénes somos?"
-    subtitle="Conocenos un poco más y descubre por qué somos la mejor opción para ti."
+    subtitle="Conocenos y descubre por qué somos la mejor opción para ti."
     image={{
-      src: 'https://www.fundeu.es/wp-content/uploads/2020/03/gimnasio_gym_efespthirteen565662.jpg',
-      alt: 'Colorful Image',
+      src: '~/assets/images/nosotros.png',
+      alt: 'Nosotros',
     }}
   >
     <Fragment slot="content">
-      <span class="text-xl font-bold italic tracking-tight dark:text-white sm:text-3xl mb-2">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum."
+      <span class="font-normal tracking-tight dark:text-gray-400 text-xl md:text-3xl lg:text-4xl mb-2">
+        En Titanium Gym, no somos solo un gimnasio; somos una comunidad apasionada dedicada a transformar vidas a través
+        del fitness y el bienestar integral. Nuestra historia es la historia de cada persona que ha caminado por
+        nuestras puertas con la determinación de alcanzar sus metas y superar sus límites.
       </span>
     </Fragment>
     <Fragment slot="bg">
@@ -104,7 +105,7 @@ const metadata = {
     ]}
   />
 
-  <BlogLatestPosts title="Lorem ipsum dolor sit amet">
+  <BlogLatestPosts title="Blog Fitness">
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
@@ -112,39 +113,38 @@ const metadata = {
 
   <FAQs
     title="Preguntas Frecuentes"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    tagline="FAQs"
+    tagline="FAQ"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Lorem?',
+        title: '¿Qué programas de fitness ofrecen?',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'Ofrecemos una amplia gama de programas de fitness, desde clases grupales hasta entrenamiento personalizado. Explora nuestras opciones que incluyen entrenamiento de fuerza, cardio, yoga y más para encontrar el programa que se adapte a tus objetivos y preferencias.',
       },
       {
-        title: 'Lorem?',
+        title: '¿Cómo puedo reservar una sesión de entrenamiento personal?',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'Reservar una sesión de entrenamiento personal en Titanium Gym es fácil. Puedes hacerlo en línea a través de nuestro portal de reservas o visitándonos en la recepción. Nuestro equipo estará encantado de ayudarte a encontrar el horario y entrenador que mejor se adapte a tus necesidades.',
       },
       {
-        title: 'Lorem?',
+        title: '¿Titanium Gym tiene clases para principiantes?',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          '¡Sí! Ofrecemos clases diseñadas específicamente para principiantes, así como opciones para todos los niveles de condición física. Consulta nuestro programa de clases o habla con nuestro personal para encontrar la mejor opción para ti.',
       },
       {
-        title: 'Lorem?',
+        title: '¿Cómo puedo renovar mi membresía en Titanium Gym?',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'Renovar o actualizar tu membresía es fácil. Puedes hacerlo en persona en la recepción de nuestro gimnasio o a través de nuestro portal en línea. Si necesitas asistencia, nuestro personal estará encantado de guiarte durante el proceso.',
       },
       {
-        title: 'Lorem?',
+        title: '¿Titanium Gym ofrece asesoramiento en nutrición?',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'Sí, ofrecemos asesoramiento nutricional personalizado como parte de nuestros servicios. Trabaja con nuestros expertos en nutrición para desarrollar un plan que complemente tu entrenamiento y te ayude a alcanzar tus objetivos.',
       },
       {
-        title: 'Lorem?',
+        title: '¿Cuál es la política de cancelación de membresía?',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'Puedes cancelar tu membresía en cualquier momento. Te pedimos que nos notifiques con al menos 30 días de antelación. Para obtener detalles específicos, visita la sección "Políticas" en nuestro sitio web o comunícate con nosotros.',
       },
     ]}
   />
