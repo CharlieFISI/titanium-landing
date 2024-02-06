@@ -24,7 +24,7 @@ const {
       {
         prices &&
           prices.map(({ title, price, period, items, callToAction, hasRibbon = false, ribbonTitle }) => (
-            <div class="col-span-3 mx-auto flex w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1">
+            <div class="col-span-3 mx-auto flex max-w-96 sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1">
               {price && period && (
                 <div class="rounded-lg backdrop-blur border border-gray-200 dark:border-transparent bg-gray-900/95 dark:bg-white/5 shadow px-6 py-8 flex w-full max-w-lg flex-col justify-between text-center">
                   {hasRibbon && ribbonTitle && (
@@ -50,13 +50,13 @@ const {
                       </div>
                     </div>
                     {items && (
-                      <ul role="list" class="my-8 md:my-10 space-y-2 text-left">
+                      <ul role="list" class="my-5 md:my-6 space-y-2 text-left">
                         {items.map(
                           ({ description, icon, highlight }) =>
                             description && (
-                              <li class="flex items-start space-x-3 leading-7">
+                              <li class="justify-start space-x-3 leading-7">
                                 <div
-                                  class={`flex py-[15px] px-5 rounded-lg justify-center ${highlight ? `${hasRibbon ? 'text-white bg-[#EAF8931A]' : 'text-white bg-[#7469F61A]'}` : 'text-gray-400 bg-transparent'}`}
+                                  class={`flex py-3 px-4 rounded-lg justify-start ${highlight ? `${hasRibbon ? 'text-white bg-[#EAF8931A]' : 'text-white bg-[#7469F61A]'}` : 'text-gray-400 bg-transparent'}`}
                                 >
                                   <Icon
                                     name={icon ? icon : 'material-symbols:done'}
