@@ -22,10 +22,10 @@ export const footerData = {
     {
       title: 'TitaniumGym',
       links: [
-        { text: '¿Quiénes somos?', href: '#' },
-        { text: '¿Qué te ofrecemos', href: '#' },
-        { text: 'Productos', href: '#' },
-        { text: 'FAQ', href: '#' },
+        { text: '¿Quiénes somos?', href: getPermalink('/#content') },
+        { text: '¿Qué te ofrecemos?', href: getPermalink('/#features') },
+        { text: 'Blog', href: getPermalink('/#blogs') },
+        { text: 'FAQ', href: getPermalink('/#faqs') },
       ],
     },
     {

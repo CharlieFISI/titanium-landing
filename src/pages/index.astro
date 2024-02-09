@@ -40,6 +40,7 @@ const metadata = {
 
   <Content
     isReversed
+    id="content"
     tagline="Nosotros"
     title="¿Quiénes somos?"
     subtitle="Conocenos y descubre por qué somos la mejor opción para ti."
@@ -105,13 +106,14 @@ const metadata = {
     ]}
   />
 
-  <BlogLatestPosts title="Blog Fitness">
+  <BlogLatestPosts id="blogs" title="Blog Fitness">
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </BlogLatestPosts>
 
   <FAQs
+    id="faqs"
     title="Preguntas Frecuentes"
     tagline="FAQ"
     classes={{ container: 'max-w-6xl' }}
